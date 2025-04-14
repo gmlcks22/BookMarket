@@ -9,11 +9,11 @@
 </head>
 <body> 
 <div class = "container py-4">
-	<%@ include file = "munu.jsp" %>
+	<%@ include file = "menu.jsp" %>
 	
 	<div class = "p-5 mb-4 bg-body-tertiary rounded-3">
 		<div class = "container-fluid py-5">
-			<h1 class = "display-5 fw-bold"도서목록</h1>
+			<h1 class = "display-5 fw-bold">도서목록</h1>
 			<p class = "col-md-8 fs-4">BookList</p>
 		</div>
 	</div>
@@ -33,6 +33,7 @@
 				<br><%=book.getPublisher() %> | <%=book.getReleaseDate() %>
 				<p> <%=book.getDescription().substring(0,60) %>...
 				<p> <%=book.getUnitPrice() %>원
+				<p> <a href="./book.jsp?id=<%book.getBookId() %>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;></a>
 			</div>
 		</div>
 		<%

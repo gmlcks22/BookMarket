@@ -16,6 +16,7 @@ public class Book implements Serializable {
 	private long unitsInStock;
 	private String releasedate;
 	private String condition;
+	
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -58,7 +59,7 @@ public class Book implements Serializable {
 		this.description = description;
 	}
 
-	public String getPuvlisher() {return publisher;}
+	public String getPublisher() {return publisher;}
 
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
@@ -86,5 +87,16 @@ public class Book implements Serializable {
 
 	public void setCondition(String condition) {
 		this.condition = condition;
+	}
+	
+	// 천 단위 쉼표가 포함된 가격 문자열 저장용
+	private String formattedUnitPrice;
+	
+	public String getFormattedUnitPrice() {
+		return formattedUnitPrice;
+	}
+	
+	public void setFormattedUnitPrice(String formattedUnitPrice) {
+		this.formattedUnitPrice = formattedUnitPrice;
 	}
 }
